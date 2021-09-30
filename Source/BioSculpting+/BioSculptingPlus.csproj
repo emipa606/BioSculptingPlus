@@ -76,9 +76,7 @@
     <Compile Include="PatchOperationCheckSettings.cs" />
     <Compile Include="Settings\RecommendedValues.cs" />
     <Compile Include="Settings\Settings.cs" />
-    <None Include="BioSculpterCycles\Example\CompBiosculpterPod_ExampleCycle.cs" />
     <Compile Include="BioSculpterCycles\Beauty\CompBiosculpterPod_BeautyCycle.cs" />
-    <None Include="BioSculpterCycles\Example\CompProperties_BiosculpterPod_ExampleCycle.cs" />
     <Compile Include="BioSculpterCycles\AgeIncrease\CompBiosculpterPod_AgeIncreaseCycle.cs" />
     <Compile Include="BioSculpterCycles\Beauty\CompProperties_BiosculpterPod_BeautyCycle.cs" />
     <Compile Include="BioSculpterCycles\AgeIncrease\CompProperties_BiosculpterPod_AgeIncreaseCycle.cs" />
