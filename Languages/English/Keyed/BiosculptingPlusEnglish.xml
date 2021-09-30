@@ -43,8 +43,12 @@
   <Settings_NutritionRequired>Nutrition </Settings_NutritionRequired>
 
   <Settings_Days> days</Settings_Days>
+  <Settings_Quadrum> quadrum</Settings_Quadrum>
   <Settings_Year> years</Settings_Year>
   <Settings_Nutrition> nutrition</Settings_Nutrition>
+
+  <Apply_Custom_Values>Apply current</Apply_Custom_Values>
+  <Apply_Recommended_Values>Apply recommended</Apply_Recommended_Values>
   <!-- Settings -->
 
 </LanguageData>

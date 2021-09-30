@@ -34,7 +34,7 @@ namespace BioSculptingPlus
             list.CheckboxLabeled("Settings_Enable".Translate(), ref Enabled);
             list.AddLabeledSlider("Settings_TimeRequired".Translate(), ref Duration, 0f, 60f, null, null, 0.1f, true, Duration.ToString() + "Settings_Days".Translate(), 0.2f);
             list.AddLabeledSlider("Settings_NutritionRequired".Translate(), ref Nutrition, 0f, 60f, null, null, 0.1f, true, Nutrition.ToString() + "Settings_Nutrition".Translate(), 0.2f);
-            list.AddLabeledSlider("Settings_TimeAgeIncreaseCycle".Translate(), ref TimeIncrease, 0f, 1200f, null, null, 1f, true, TimeIncrease.ToString() + "Settings_Days".Translate(), 0.2f);
+            list.AddLabeledSlider("Settings_TimeAgeIncreaseCycle".Translate(), ref TimeIncrease, 0f, 1200f, null, null, 15f, true, TimeIncrease.ToString() + "Settings_Days".Translate(), 0.2f);
             Store();
         }
 

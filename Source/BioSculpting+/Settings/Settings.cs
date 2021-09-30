@@ -10,11 +10,11 @@ namespace BioSculptingPlus
     {
         #region Settings
 
-        public CycleSettings BeautyCycleSettings = new CycleSettings("Settings_BeautyCycle", true, 1f, 1f);
-        public CycleSettingsAgeIncrease AgeIncreaseCycleSettings = new CycleSettingsAgeIncrease("Settings_AgeIncreaseCycle", 1f, true, 1f, 1f);
-        public CycleSettings VoiceCycleSettings = new CycleSettings("Settings_VoiceCycle", true, 1f, 1f);
-        public CycleSettings ToughCycleSettings = new CycleSettings("Settings_ToughCycle", true, 1f, 1f);
-        public CycleSettings ImmunityCycleSettings = new CycleSettings("Settings_ImmunityCycle", true, 1f, 1f);
+        public CycleSettings BeautyCycleSettings = new CycleSettings("Settings_BeautyCycle", true, RecommendedValues.BeautyCycle.Duration, RecommendedValues.BeautyCycle.Nutrition);
+        public CycleSettingsAgeIncrease AgeIncreaseCycleSettings = new CycleSettingsAgeIncrease("Settings_AgeIncreaseCycle", RecommendedValues.AgeIncreaseCycle.Potency, true, RecommendedValues.AgeIncreaseCycle.Duration, RecommendedValues.AgeIncreaseCycle.Nutrition);
+        public CycleSettings VoiceCycleSettings = new CycleSettings("Settings_VoiceCycle", true, RecommendedValues.VoiceCycle.Duration, RecommendedValues.VoiceCycle.Nutrition);
+        public CycleSettings ToughCycleSettings = new CycleSettings("Settings_ToughCycle", true, RecommendedValues.ToughCycle.Duration, RecommendedValues.ToughCycle.Nutrition);
+        public CycleSettings ImmunityCycleSettings = new CycleSettings("Settings_ImmunityCycle", true, RecommendedValues.ImmunityCycle.Duration, RecommendedValues.ImmunityCycle.Nutrition);
 
         private Vector2 scrollPosition;
 
@@ -59,28 +59,28 @@ namespace BioSculptingPlus
                 ApplySettings();
             }
             rect2.x += canvas.width * 0.7f;
-            if (Widgets.ButtonText(rect2, "Reset Values"))
+            if (Widgets.ButtonText(rect2, "Apply_Recommended_Values".Translate()))
             {
                 // Beauty Cycle
-                BeautyCycleSettings.Duration = 1f;
-                BeautyCycleSettings.Nutrition = 1f;
+                BeautyCycleSettings.Duration = RecommendedValues.BeautyCycle.Duration;
+                BeautyCycleSettings.Nutrition = RecommendedValues.BeautyCycle.Nutrition;
 
                 // Age Increase Cycle
-                AgeIncreaseCycleSettings.Duration = 1f;
-                AgeIncreaseCycleSettings.Nutrition = 1f;
-                AgeIncreaseCycleSettings.TimeIncrease = 1f;
+                AgeIncreaseCycleSettings.Duration = RecommendedValues.AgeIncreaseCycle.Duration;
+                AgeIncreaseCycleSettings.Nutrition = RecommendedValues.AgeIncreaseCycle.Nutrition;
+                AgeIncreaseCycleSettings.TimeIncrease = RecommendedValues.AgeIncreaseCycle.Potency;
 
                 // Voice Fix Cycle
-                VoiceCycleSettings.Duration = 1f;
-                VoiceCycleSettings.Nutrition = 1f;
+                VoiceCycleSettings.Duration = RecommendedValues.VoiceCycle.Duration;
+                VoiceCycleSettings.Nutrition = RecommendedValues.VoiceCycle.Nutrition;
 
                 // Tough Cycle
-                ToughCycleSettings.Duration = 1f;
-                ToughCycleSettings.Nutrition = 1f;
+                ToughCycleSettings.Duration = RecommendedValues.ToughCycle.Duration;
+                ToughCycleSettings.Nutrition = RecommendedValues.ToughCycle.Nutrition;
 
                 // Immunity Cycle
-                ImmunityCycleSettings.Duration = 1f;
-                ImmunityCycleSettings.Nutrition = 1f;
+                ImmunityCycleSettings.Duration = RecommendedValues.ImmunityCycle.Duration;
+                ImmunityCycleSettings.Nutrition = RecommendedValues.ImmunityCycle.Nutrition;
 
                 ApplySettings();
             }

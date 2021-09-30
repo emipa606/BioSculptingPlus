@@ -74,6 +74,7 @@
     <Compile Include="Settings\CycleSettingsAgeIncrease.cs" />
     <Compile Include="Settings\CycleSettings.cs" />
     <Compile Include="PatchOperationCheckSettings.cs" />
+    <Compile Include="Settings\RecommendedValues.cs" />
     <Compile Include="Settings\Settings.cs" />
     <None Include="BioSculpterCycles\Example\CompBiosculpterPod_ExampleCycle.cs" />
     <Compile Include="BioSculpterCycles\Beauty\CompBiosculpterPod_BeautyCycle.cs" />
