@@ -86,27 +86,54 @@ namespace BioSculptingPlus
             }
         }
 
+        private R GetBiosculpterCompPropertiesAs<T, R>()
+            where R : CompProperties_BiosculpterPod_BaseCycle
+            where T : CompBiosculpterPod_Cycle
+        {
+            return DefDatabase<ThingDef>.GetNamed("BiosculpterPod").comps.Find((CompProperties x) => x.GetType() == typeof(R) && x.compClass == typeof(T)) as R;
+        }
+
         public void ApplySettings()
         {
             // Beauty Cycle
-            (DefDatabase<ThingDef>.GetNamed("BiosculpterPod").comps.Find((CompProperties x) => x.GetType() == typeof(CompProperties_BiosculpterPod_BeautyCycle) && x.compClass == typeof(CompBiosculpterPod_BeautyCycle)) as CompProperties_BiosculpterPod_BeautyCycle).durationDays = BeautyCycleSettings.Duration;
-            (DefDatabase<ThingDef>.GetNamed("BiosculpterPod").comps.Find((CompProperties x) => x.GetType() == typeof(CompProperties_BiosculpterPod_BeautyCycle) && x.compClass == typeof(CompBiosculpterPod_BeautyCycle)) as CompProperties_BiosculpterPod_BeautyCycle).nutritionRequired = BeautyCycleSettings.Nutrition;
+            var CompBeautyCycle = GetBiosculpterCompPropertiesAs<CompBiosculpterPod_BeautyCycle, CompProperties_BiosculpterPod_BeautyCycle> ();
+            if (CompBeautyCycle != null)
+            {
+                CompBeautyCycle.durationDays = BeautyCycleSettings.Duration;
+                CompBeautyCycle.nutritionRequired = BeautyCycleSettings.Nutrition;
+            }
 
             // Age Increase Cycle
-            (DefDatabase<ThingDef>.GetNamed("BiosculpterPod").comps.Find((CompProperties x) => x.GetType() == typeof(CompProperties_BiosculpterPod_AgeIncreaseCycle) && x.compClass == typeof(CompBiosculpterPod_AgeIncreaseCycle)) as CompProperties_BiosculpterPod_AgeIncreaseCycle).durationDays = AgeIncreaseCycleSettings.Duration;
-            (DefDatabase<ThingDef>.GetNamed("BiosculpterPod").comps.Find((CompProperties x) => x.GetType() == typeof(CompProperties_BiosculpterPod_AgeIncreaseCycle) && x.compClass == typeof(CompBiosculpterPod_AgeIncreaseCycle)) as CompProperties_BiosculpterPod_AgeIncreaseCycle).nutritionRequired = AgeIncreaseCycleSettings.Nutrition;
+            var CompAgeIncreaseCycle = GetBiosculpterCompPropertiesAs<CompBiosculpterPod_AgeIncreaseCycle, CompProperties_BiosculpterPod_AgeIncreaseCycle>();
+            if (CompAgeIncreaseCycle != null)
+            {
+                CompAgeIncreaseCycle.durationDays = AgeIncreaseCycleSettings.Duration;
+                CompAgeIncreaseCycle.nutritionRequired = AgeIncreaseCycleSettings.Nutrition;
+            }
 
             // Voice Fix Cycle
-            (DefDatabase<ThingDef>.GetNamed("BiosculpterPod").comps.Find((CompProperties x) => x.GetType() == typeof(CompProperties_BiosculpterPod_VoiceCycle) && x.compClass == typeof(CompBiosculpterPod_VoiceCycle)) as CompProperties_BiosculpterPod_VoiceCycle).durationDays = VoiceCycleSettings.Duration;
-            (DefDatabase<ThingDef>.GetNamed("BiosculpterPod").comps.Find((CompProperties x) => x.GetType() == typeof(CompProperties_BiosculpterPod_VoiceCycle) && x.compClass == typeof(CompBiosculpterPod_VoiceCycle)) as CompProperties_BiosculpterPod_VoiceCycle).nutritionRequired = VoiceCycleSettings.Nutrition;
+            var CompVoiceCycle = GetBiosculpterCompPropertiesAs<CompBiosculpterPod_VoiceCycle, CompProperties_BiosculpterPod_VoiceCycle>();
+            if (CompVoiceCycle != null)
+            {
+                CompVoiceCycle.durationDays = VoiceCycleSettings.Duration;
+                CompVoiceCycle.nutritionRequired = VoiceCycleSettings.Nutrition;
+            }
 
             // Tough Cycle
-            (DefDatabase<ThingDef>.GetNamed("BiosculpterPod").comps.Find((CompProperties x) => x.GetType() == typeof(CompProperties_BiosculpterPod_ToughCycle) && x.compClass == typeof(CompBiosculpterPod_ToughCycle)) as CompProperties_BiosculpterPod_ToughCycle).durationDays = ToughCycleSettings.Duration;
-            (DefDatabase<ThingDef>.GetNamed("BiosculpterPod").comps.Find((CompProperties x) => x.GetType() == typeof(CompProperties_BiosculpterPod_ToughCycle) && x.compClass == typeof(CompBiosculpterPod_ToughCycle)) as CompProperties_BiosculpterPod_ToughCycle).nutritionRequired = ToughCycleSettings.Nutrition;
+            var CompToughCycle = GetBiosculpterCompPropertiesAs<CompBiosculpterPod_ToughCycle, CompProperties_BiosculpterPod_ToughCycle>();
+            if (CompToughCycle != null)
+            {
+                CompToughCycle.durationDays = ToughCycleSettings.Duration;
+                CompToughCycle.nutritionRequired = ToughCycleSettings.Nutrition;
+            }
 
             // Immunity Cycle
-            (DefDatabase<ThingDef>.GetNamed("BiosculpterPod").comps.Find((CompProperties x) => x.GetType() == typeof(CompProperties_BiosculpterPod_ImmunityCycle) && x.compClass == typeof(CompBiosculpterPod_ImmunityCycle)) as CompProperties_BiosculpterPod_ImmunityCycle).durationDays = ImmunityCycleSettings.Duration;
-            (DefDatabase<ThingDef>.GetNamed("BiosculpterPod").comps.Find((CompProperties x) => x.GetType() == typeof(CompProperties_BiosculpterPod_ImmunityCycle) && x.compClass == typeof(CompBiosculpterPod_ImmunityCycle)) as CompProperties_BiosculpterPod_ImmunityCycle).nutritionRequired = ImmunityCycleSettings.Nutrition;
+            var CompImmunityCycle = GetBiosculpterCompPropertiesAs<CompBiosculpterPod_ImmunityCycle, CompProperties_BiosculpterPod_ImmunityCycle>();
+            if (CompImmunityCycle != null)
+            {
+                CompImmunityCycle.durationDays = ImmunityCycleSettings.Duration;
+                CompImmunityCycle.nutritionRequired = ImmunityCycleSettings.Nutrition;
+            }
         }
     }
 }
