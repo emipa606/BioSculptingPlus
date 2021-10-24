@@ -10,11 +10,11 @@ namespace BioSculptingPlus
     {
         #region Settings
 
-        public CycleSettings BeautyCycleSettings = new CycleSettings("Settings_BeautyCycle", true, RecommendedValues.BeautyCycle.Duration, RecommendedValues.BeautyCycle.Nutrition);
-        public CycleSettingsAgeIncrease AgeIncreaseCycleSettings = new CycleSettingsAgeIncrease("Settings_AgeIncreaseCycle", RecommendedValues.AgeIncreaseCycle.Potency, true, RecommendedValues.AgeIncreaseCycle.Duration, RecommendedValues.AgeIncreaseCycle.Nutrition);
-        public CycleSettings VoiceCycleSettings = new CycleSettings("Settings_VoiceCycle", true, RecommendedValues.VoiceCycle.Duration, RecommendedValues.VoiceCycle.Nutrition);
-        public CycleSettings ToughCycleSettings = new CycleSettings("Settings_ToughCycle", true, RecommendedValues.ToughCycle.Duration, RecommendedValues.ToughCycle.Nutrition);
-        public CycleSettings ImmunityCycleSettings = new CycleSettings("Settings_ImmunityCycle", true, RecommendedValues.ImmunityCycle.Duration, RecommendedValues.ImmunityCycle.Nutrition);
+        public CycleSettings BeautyCycleSettings = new CycleSettings("Settings_BeautyCycle", true, RecommendedValues.BeautyCycle.Duration);
+        public CycleSettingsAgeIncrease AgeIncreaseCycleSettings = new CycleSettingsAgeIncrease("Settings_AgeIncreaseCycle", RecommendedValues.AgeIncreaseCycle.Potency, true, RecommendedValues.AgeIncreaseCycle.Duration);
+        public CycleSettings VoiceCycleSettings = new CycleSettings("Settings_VoiceCycle", true, RecommendedValues.VoiceCycle.Duration);
+        public CycleSettings ToughCycleSettings = new CycleSettings("Settings_ToughCycle", true, RecommendedValues.ToughCycle.Duration);
+        public CycleSettings ImmunityCycleSettings = new CycleSettings("Settings_ImmunityCycle", true, RecommendedValues.ImmunityCycle.Duration);
 
         private Vector2 scrollPosition;
 
@@ -63,24 +63,19 @@ namespace BioSculptingPlus
             {
                 // Beauty Cycle
                 BeautyCycleSettings.Duration = RecommendedValues.BeautyCycle.Duration;
-                BeautyCycleSettings.Nutrition = RecommendedValues.BeautyCycle.Nutrition;
-
+                
                 // Age Increase Cycle
                 AgeIncreaseCycleSettings.Duration = RecommendedValues.AgeIncreaseCycle.Duration;
-                AgeIncreaseCycleSettings.Nutrition = RecommendedValues.AgeIncreaseCycle.Nutrition;
                 AgeIncreaseCycleSettings.TimeIncrease = RecommendedValues.AgeIncreaseCycle.Potency;
 
                 // Voice Fix Cycle
                 VoiceCycleSettings.Duration = RecommendedValues.VoiceCycle.Duration;
-                VoiceCycleSettings.Nutrition = RecommendedValues.VoiceCycle.Nutrition;
 
                 // Tough Cycle
                 ToughCycleSettings.Duration = RecommendedValues.ToughCycle.Duration;
-                ToughCycleSettings.Nutrition = RecommendedValues.ToughCycle.Nutrition;
 
                 // Immunity Cycle
                 ImmunityCycleSettings.Duration = RecommendedValues.ImmunityCycle.Duration;
-                ImmunityCycleSettings.Nutrition = RecommendedValues.ImmunityCycle.Nutrition;
 
                 ApplySettings();
             }
@@ -100,7 +95,6 @@ namespace BioSculptingPlus
             if (CompBeautyCycle != null)
             {
                 CompBeautyCycle.durationDays = BeautyCycleSettings.Duration;
-                CompBeautyCycle.nutritionRequired = BeautyCycleSettings.Nutrition;
             }
 
             // Age Increase Cycle
@@ -108,7 +102,6 @@ namespace BioSculptingPlus
             if (CompAgeIncreaseCycle != null)
             {
                 CompAgeIncreaseCycle.durationDays = AgeIncreaseCycleSettings.Duration;
-                CompAgeIncreaseCycle.nutritionRequired = AgeIncreaseCycleSettings.Nutrition;
             }
 
             // Voice Fix Cycle
@@ -116,7 +109,6 @@ namespace BioSculptingPlus
             if (CompVoiceCycle != null)
             {
                 CompVoiceCycle.durationDays = VoiceCycleSettings.Duration;
-                CompVoiceCycle.nutritionRequired = VoiceCycleSettings.Nutrition;
             }
 
             // Tough Cycle
@@ -124,7 +116,6 @@ namespace BioSculptingPlus
             if (CompToughCycle != null)
             {
                 CompToughCycle.durationDays = ToughCycleSettings.Duration;
-                CompToughCycle.nutritionRequired = ToughCycleSettings.Nutrition;
             }
 
             // Immunity Cycle
@@ -132,7 +123,6 @@ namespace BioSculptingPlus
             if (CompImmunityCycle != null)
             {
                 CompImmunityCycle.durationDays = ImmunityCycleSettings.Duration;
-                CompImmunityCycle.nutritionRequired = ImmunityCycleSettings.Nutrition;
             }
         }
     }

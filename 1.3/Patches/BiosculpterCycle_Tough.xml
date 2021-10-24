@@ -22,7 +22,6 @@
                 <label>tough</label>
                 <description>Strenghten the user's muscular tissues.</description>
                 <iconPath>UI/Gizmos/BiosculpterCycleTough</iconPath>
-                <nutritionRequired>10</nutritionRequired>
                 <durationDays>5</durationDays>
                 <operatingColor>(1.000,0.918,0.000)</operatingColor>
               </li>

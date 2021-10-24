@@ -22,7 +22,6 @@
                 <label>aging</label>
                 <description>Accelerate the user's aging process.</description>
                 <iconPath>UI/Gizmos/BiosculpterCycleAgeIncrease</iconPath>
-                <nutritionRequired>10</nutritionRequired>
                 <durationDays>5</durationDays>
                 <operatingColor>(1.000,0.918,0.000)</operatingColor>
               </li>
