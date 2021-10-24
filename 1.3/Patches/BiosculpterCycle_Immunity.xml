@@ -22,7 +22,6 @@
                 <label>immunity</label>
                 <description>Improve the user's immunity system.</description>
                 <iconPath>UI/Gizmos/BiosculpterCycleImmunity</iconPath>
-                <nutritionRequired>10</nutritionRequired>
                 <durationDays>5</durationDays>
                 <operatingColor>(1.000,0.918,0.000)</operatingColor>
               </li>
