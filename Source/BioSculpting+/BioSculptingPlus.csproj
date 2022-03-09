@@ -70,7 +70,6 @@
     <Compile Include="BioSculpterCycles\VoiceFix\CompProperties_BiosculpterPod_VoiceCycle.cs" />
     <Compile Include="BioSculptingPlusModOnStart.cs" />
     <Compile Include="BioSculptingPlusMod.cs" />
-    <None Include="Helpers\TraitHelper.cs" />
     <Compile Include="Settings\CycleSettingsAgeIncrease.cs" />
     <Compile Include="Settings\CycleSettings.cs" />
     <Compile Include="PatchOperationCheckSettings.cs" />

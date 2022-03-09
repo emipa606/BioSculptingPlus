@@ -21,7 +21,6 @@ namespace BioSculptingPlus
                 {
                     case "ShowBeautyCycle":
                         total = BioSculptingPlusMod.settings.BeautyCycleSettings.Enabled && total;
-                        // total = BioSculptingPlusMod.settings.showBeautyCycle && total;
                         break;
                     case "ShowVoiceCycle":
                         total = BioSculptingPlusMod.settings.VoiceCycleSettings.Enabled && total;

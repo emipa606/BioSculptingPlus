@@ -11,11 +11,9 @@ namespace BioSculptingPlus
 
             foreach (Trait trait in pawn.story.traits.allTraits)
             {
-                switch (trait.Label)
+                if (trait.def == TraitDefOf.Tough)
                 {
-                    case "tough":
-                        isTough = true;
-                        break;
+                    isTough = true;
                 }
             }
 
@@ -25,7 +23,7 @@ namespace BioSculptingPlus
             }
             else
             {
-                pawn.story.traits.GainTrait(new Trait(TraitDef.Named("Tough"), 0, forced: true));
+                pawn.story.traits.GainTrait(new Trait(TraitDefOf.Tough, 0, forced: true));
                 Messages.Message("BiosculpterToughCycleComplete_Success".Translate(pawn.Named("PAWN")), pawn, MessageTypeDefOf.PositiveEvent);
             }
 
