@@ -10,14 +10,13 @@ namespace BioSculptingPlus
             Trait toRemove = null;
             foreach (Trait trait in pawn.story.traits.allTraits)
             {
-                switch (trait.Label)
+                if (trait.def == TraitDefOf.AnnoyingVoice)
                 {
-                    case "annoying voice":
-                        toRemove = trait;
-                        break;
-                    case "creepy breathing":
-                        toRemove = trait;
-                        break;
+                    toRemove = trait;
+                }
+                if (trait.def == TraitDefOf.CreepyBreathing)
+                {
+                    toRemove = trait;
                 }
             }
 

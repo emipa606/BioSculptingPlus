@@ -13,15 +13,20 @@ namespace BioSculptingPlus
 
             foreach (Trait trait in pawn.story.traits.allTraits)
             {
-                switch (trait.Label)
+                if (trait.def == TraitDef.Named("Immunity")) // no TraitDefOf.Immunity
                 {
-                    case "sickly":
-                        toRemove = trait;
-                        isSickly = true;
-                        break;
-                    case "super immune":
-                        isImmune = true;
-                        break;
+                    switch (trait.Degree)
+                    {
+                        case -1: // Sickly
+                            toRemove = trait;
+                            isSickly = true;
+                            break;
+                        case 1: // Super immune
+                            isImmune = true;
+                            break;
+                        default: // Nothing
+                            break;
+                    }
                 }
             }
 
