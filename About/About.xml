@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
-  <name>BioSculptingPlus_Dev</name>
+  <name>BioSculptingPlus</name>
   <author>Waether</author>
   <url></url>
   <supportedVersions>
@@ -28,7 +28,7 @@
     <li>brrainz.harmony</li>
     <li>Inglix.FasterBiosculptingPod</li>
   </loadAfter>
-  <packageId>waether.biosculptingplus.dev</packageId>
+  <packageId>waether.biosculptingplus</packageId>
   <description>
     Adds more functionalities to the biosculpter:
 
