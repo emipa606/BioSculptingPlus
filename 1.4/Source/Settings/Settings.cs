@@ -2,7 +2,6 @@
 using Verse;
 using UnityEngine;
 using SettingsHelper;
-using HarmonyLib;
 
 namespace BioSculptingPlus
 {
@@ -124,6 +123,7 @@ namespace BioSculptingPlus
             {
                 CompImmunityCycle.durationDays = ImmunityCycleSettings.Duration;
             }
+
         }
     }
 }

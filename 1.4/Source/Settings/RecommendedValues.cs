@@ -27,5 +27,10 @@
         {
             public const float Duration = 8.0f;
         }
+
+        public static class HediffCycle
+        {
+            public const float Duration = 8.0f;
+        }
     }
 }
