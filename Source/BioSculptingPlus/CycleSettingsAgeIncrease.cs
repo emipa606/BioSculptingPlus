@@ -7,7 +7,7 @@ namespace BioSculptingPlus;
 public class CycleSettingsAgeIncrease(string label, float potency = 1f, bool enabled = true, float duration = 1f)
     : CycleSettings(label, enabled, duration)
 {
-    protected float? CheckTimeIncrease;
+    private float? checkTimeIncrease;
     public float TimeIncrease = potency;
 
     public void ScribeValues(string label, float potency = 1f, bool enabled = true, float duration = 1f)
@@ -28,22 +28,12 @@ public class CycleSettingsAgeIncrease(string label, float potency = 1f, bool ena
                 15f, true, ((int)(TimeIncrease * GenDate.TicksPerDay)).ToStringTicksToPeriod(), 0.2f);
         }
 
+        store();
+    }
+
+    private void store()
+    {
         Store();
-    }
-
-    public new void Store()
-    {
-        base.Store();
-        CheckTimeIncrease ??= TimeIncrease;
-    }
-
-    public new bool NeedPatch()
-    {
-        return base.NeedPatch() || CheckTimeIncrease != TimeIncrease;
-    }
-
-    public new bool NeedReload()
-    {
-        return base.NeedReload();
+        checkTimeIncrease ??= TimeIncrease;
     }
 }

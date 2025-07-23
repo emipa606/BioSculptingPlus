@@ -7,9 +7,9 @@ namespace BioSculptingPlus;
 public class CycleSettings(string label, bool enabled = true, float duration = 1f)
 {
     protected readonly string Label = label;
-    protected float? CheckDuration;
+    private float? checkDuration;
 
-    protected bool? CheckEnabled;
+    private bool? checkEnabled;
 
     public float Duration = duration;
 
@@ -36,17 +36,17 @@ public class CycleSettings(string label, bool enabled = true, float duration = 1
 
     protected void Store()
     {
-        CheckEnabled ??= Enabled;
-        CheckDuration ??= Duration;
+        checkEnabled ??= Enabled;
+        checkDuration ??= Duration;
     }
 
     protected bool NeedPatch()
     {
-        return CheckDuration != Duration;
+        return checkDuration != Duration;
     }
 
     protected bool NeedReload()
     {
-        return CheckEnabled != Enabled;
+        return checkEnabled != Enabled;
     }
 }

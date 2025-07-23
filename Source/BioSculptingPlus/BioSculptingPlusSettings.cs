@@ -9,16 +9,15 @@ public class BioSculptingPlusSettings : ModSettings
 {
     public static string CurrentVersion;
 
-    public readonly CycleSettingsAgeIncrease AgeIncreaseCycleSettings =
-        new CycleSettingsAgeIncrease("Settings_AgeIncreaseCycle", 60f, true, 2f);
+    public readonly CycleSettingsAgeIncrease AgeIncreaseCycleSettings = new("Settings_AgeIncreaseCycle", 60f, true, 2f);
 
-    public readonly CycleSettings BeautyCycleSettings = new CycleSettings("Settings_BeautyCycle", true, 4f);
+    public readonly CycleSettings BeautyCycleSettings = new("Settings_BeautyCycle", true, 4f);
 
-    public readonly CycleSettings ImmunityCycleSettings = new CycleSettings("Settings_ImmunityCycle", true, 8f);
+    public readonly CycleSettings ImmunityCycleSettings = new("Settings_ImmunityCycle", true, 8f);
 
-    public readonly CycleSettings ToughCycleSettings = new CycleSettings("Settings_ToughCycle", true, 8f);
+    public readonly CycleSettings ToughCycleSettings = new("Settings_ToughCycle", true, 8f);
 
-    public readonly CycleSettings VoiceCycleSettings = new CycleSettings("Settings_VoiceCycle", true, 8f);
+    public readonly CycleSettings VoiceCycleSettings = new("Settings_VoiceCycle", true, 8f);
 
     private Vector2 scrollPosition;
 
@@ -72,16 +71,16 @@ public class BioSculptingPlusSettings : ModSettings
             return;
         }
 
-        BeautyCycleSettings.Duration = 4f;
-        AgeIncreaseCycleSettings.Duration = 2f;
-        AgeIncreaseCycleSettings.TimeIncrease = 60f;
-        VoiceCycleSettings.Duration = 8f;
-        ToughCycleSettings.Duration = 8f;
-        ImmunityCycleSettings.Duration = 8f;
+        BeautyCycleSettings.Duration = RecommendedValues.BeautyCycle.Duration;
+        AgeIncreaseCycleSettings.Duration = RecommendedValues.AgeIncreaseCycle.Duration;
+        AgeIncreaseCycleSettings.TimeIncrease = RecommendedValues.AgeIncreaseCycle.Potency;
+        VoiceCycleSettings.Duration = RecommendedValues.VoiceCycle.Duration;
+        ToughCycleSettings.Duration = RecommendedValues.ToughCycle.Duration;
+        ImmunityCycleSettings.Duration = RecommendedValues.ImmunityCycle.Duration;
         ApplySettings();
     }
 
-    private R GetBiosculpterCompPropertiesAs<T, R>() where T : CompBiosculpterPod_Cycle
+    private static R getBiosculpterCompPropertiesAs<T, R>() where T : CompBiosculpterPod_Cycle
         where R : CompProperties_BiosculpterPod_BaseCycle
     {
         return DefDatabase<ThingDef>.GetNamed("BiosculpterPod").comps
@@ -91,14 +90,14 @@ public class BioSculptingPlusSettings : ModSettings
     public void ApplySettings()
     {
         var biosculpterCompPropertiesAs =
-            GetBiosculpterCompPropertiesAs<CompBiosculpterPod_BeautyCycle, CompProperties_BiosculpterPod_BeautyCycle>();
+            getBiosculpterCompPropertiesAs<CompBiosculpterPod_BeautyCycle, CompProperties_BiosculpterPod_BeautyCycle>();
         if (biosculpterCompPropertiesAs != null)
         {
             biosculpterCompPropertiesAs.durationDays = BeautyCycleSettings.Duration;
         }
 
         var biosculpterCompPropertiesAs2 =
-            GetBiosculpterCompPropertiesAs<CompBiosculpterPod_AgeIncreaseCycle,
+            getBiosculpterCompPropertiesAs<CompBiosculpterPod_AgeIncreaseCycle,
                 CompProperties_BiosculpterPod_AgeIncreaseCycle>();
         if (biosculpterCompPropertiesAs2 != null)
         {
@@ -106,21 +105,21 @@ public class BioSculptingPlusSettings : ModSettings
         }
 
         var biosculpterCompPropertiesAs3 =
-            GetBiosculpterCompPropertiesAs<CompBiosculpterPod_VoiceCycle, CompProperties_BiosculpterPod_VoiceCycle>();
+            getBiosculpterCompPropertiesAs<CompBiosculpterPod_VoiceCycle, CompProperties_BiosculpterPod_VoiceCycle>();
         if (biosculpterCompPropertiesAs3 != null)
         {
             biosculpterCompPropertiesAs3.durationDays = VoiceCycleSettings.Duration;
         }
 
         var biosculpterCompPropertiesAs4 =
-            GetBiosculpterCompPropertiesAs<CompBiosculpterPod_ToughCycle, CompProperties_BiosculpterPod_ToughCycle>();
+            getBiosculpterCompPropertiesAs<CompBiosculpterPod_ToughCycle, CompProperties_BiosculpterPod_ToughCycle>();
         if (biosculpterCompPropertiesAs4 != null)
         {
             biosculpterCompPropertiesAs4.durationDays = ToughCycleSettings.Duration;
         }
 
         var biosculpterCompPropertiesAs5 =
-            GetBiosculpterCompPropertiesAs<CompBiosculpterPod_ImmunityCycle,
+            getBiosculpterCompPropertiesAs<CompBiosculpterPod_ImmunityCycle,
                 CompProperties_BiosculpterPod_ImmunityCycle>();
         if (biosculpterCompPropertiesAs5 != null)
         {

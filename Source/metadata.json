@@ -3,5 +3,17 @@
   "CanAdd": "0",
   "CanRemove": "2",
   "SocialImageSet": true,
-  "PreviewVersion": "1.5"
+  "PreviewVersion": "1.6",
+  "Patches": true,
+  "Defs": false,
+  "Assemblies": true,
+  "LinesOfCode": 20937,
+  "LinesOfXML": 5920,
+  "CodeBaseSize": 70,
+  "LastXmlCleaning": "2025-07-23T16:43:45.1390205+02:00",
+  "SearchTags": [
+    " aging",
+    " traits",
+    " beauty"
+  ]
 }

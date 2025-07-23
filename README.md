@@ -1,4 +1,4 @@
-# [BioSculptingPlus (Continued)]()
+# [BioSculptingPlus (Continued)](https://steamcommunity.com/sharedfiles/filedetails/?id=3272451634)
 
 ![Image](https://i.imgur.com/buuPQel.png)
 
@@ -41,7 +41,6 @@ All cycles can be enabled/disabled from the mod configuration menu. Cycle time a
 
 None known.
 
-If you encounter bugs please post an issue on [GitHub](https://github.com/Waether/BioSculptingPlus/issues)
 Please post harmony logs when reporting a bug, if I can't reproduce your problem I can't fix it.
 
 # Acknowledgements
@@ -49,7 +48,7 @@ Please post harmony logs when reporting a bug, if I can't reproduce your problem
 
 [Marnador](https://ludeon.com/forums/index.php?topic=11022.0) for the font used in the preview image and some assets
 
-# Suggestions &amp; Questions
+# Suggestions and Questions
 
 
 Feel free to suggest new functionalities, as long as they are interesting and I have the time I'll probably add them.
@@ -62,10 +61,12 @@ Old releases can be found [here](https://github.com/Waether/BioSculptingPlus/rel
 
 -  See if the the error persists if you just have this mod and its requirements active.
 -  If not, try adding your other mods until it happens again.
--  Post your error-log using [HugsLib](https://steamcommunity.com/workshop/filedetails/?id=818773962) or the standalone [Uploader](https://steamcommunity.com/sharedfiles/filedetails/?id=2873415404) and command Ctrl+F12
+-  Post your error-log using the [Log Uploader](https://steamcommunity.com/sharedfiles/filedetails/?id=2873415404) or the standalone [Uploader](https://steamcommunity.com/sharedfiles/filedetails/?id=2873415404) and command Ctrl+F12
 -  For best support, please use the Discord-channel for error-reporting.
 -  Do not report errors by making a discussion-thread, I get no notification of that.
 -  If you have the solution for a problem, please post it to the GitHub repository.
 -  Use [RimSort](https://github.com/RimSort/RimSort/releases/latest) to sort your mods
 
+ 
 
+[![Image](https://img.shields.io/github/v/release/emipa606/BioSculptingPlus?label=latest%20version&style=plastic&color=9f1111&labelColor=black)](https://steamcommunity.com/sharedfiles/filedetails/changelog/3272451634) | tags:  aging,  traits,  beauty
